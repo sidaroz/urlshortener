@@ -1,0 +1,31 @@
+
+<head>
+  <title>Flask app</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+
+<nav>
+  <h1><a href="http://127.0.0.1:5000/">Pedar URL shortner</a></h1>
+</nav>
+
+<div id="links">
+  <h2>Here are your links!</h2>
+  <div id="align">
+    Old link: {{ original_url }}
+    <div id="new-link">
+    This is your new link:
+      <a
+        id="myInput"
+        target="_blank"
+        href="{{ url_for('short.redirect_to_url', short_url=new_link, _external=True) }}"
+        >{{ url_for('short.redirect_to_url', short_url=new_link, _external=True) 
+        }}</a
+      >
+    </div>
+  </div>
+</div>
+<button id="copy" onclick="myFunction()">Copy me!</button>
+<script src="{{ url_for('static', filename='/copy.js') }}"></script>

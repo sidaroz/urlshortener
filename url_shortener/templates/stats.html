@@ -1,8 +1,20 @@
-<link rel="stylesheet" href="{{url_for('static, filename='/css.ss')}}">
+<head>
+    <title>Flask app</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  
+  <nav>
+    <h1><a href="http://127.0.0.1:5000/">Pedar URL shortner</a></h1>
+  </nav>
 
 {%for link in links %}
-Original Url:  {{link.original_url}} - 
-Short URL: {{ link.short_url}} - 
-Visits: {{ link.visits}}
+<div id="stat">
+Original Url:  {{link.original_url}}
+<p>Short URL: {{ link.short_url}}</p> 
+<p>Visits: {{ link.visits}}</p>
+</div>
 <br/>
 {% endfor %}

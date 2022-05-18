@@ -24,13 +24,12 @@ def add_link():
     db.session.add(link)
     db.session.commit()
 
-    return render_template('link_added.html',
+    return render_template('links.html',
         new_link = link.short_url, original_url=link.original_url)
 
 @short.route('/stats')
 def stats():
     links = Link.query.all()
-
     return render_template('stats.html', links=links)
 
 @short.errorhandler(404)
