@@ -1,5 +1,7 @@
 # LAP 4 CODE CHALLENGE
 
+By Sidar & Peter
+
 ## Installation & Usage
 
 ### Installation
