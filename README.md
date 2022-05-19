@@ -13,3 +13,4 @@ By Sidar & Peter
 ### Usage
 
 - Run `pipenv run dev` to launch server.
+
